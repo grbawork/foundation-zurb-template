@@ -4,6 +4,11 @@
 @import 'foundation';
 @import 'motion-ui';
 
+@import 'style';
+
+@import 'orbit-slider';
+@import "../fonts/fselliot/fselliot.scss";
+
 // Global styles
 @include foundation-global-styles;
 @include foundation-forms;

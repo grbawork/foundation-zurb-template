@@ -1,0 +1,80 @@
+.orbit {
+    .orbit-wrapper {
+        //background-color: $white;
+        padding-bottom: 2rem;
+        position: relative;
+        .orbit-controls {
+            position: absolute;
+            z-index: 2;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            min-width: 20rem;
+            text-align: center;
+            .orbit-previous, .orbit-next {
+                position: initial;
+                top: initial;
+                bottom: 0;
+                transform: none;
+                padding: 0;
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    height: 60px;
+                    width: 60px;
+                    background-repeat: no-repeat;
+                }
+                &:hover, &:focus {
+                    background-color: transparent!important;
+                }
+            }
+            .orbit-previous {
+                &:after {
+                    background-image: url("//cf-cdn.infobip.com/assets/2020/img/napac/ic-read_back.svg");
+                }
+            }
+            .orbit-next {
+                &:after {
+                    background-image: url("//cf-cdn.infobip.com/assets/2020/img/napac/ic-read_next.svg");
+                }
+            }
+        }
+        .orbit-container {
+            background-color: $white;
+            margin-top: 3rem;
+            padding-bottom: 3rem;
+            .orbit-slide {
+                .quote-container {
+                    box-shadow: none;
+                    max-width: 90%;
+                    margin: 0 auto 0;
+                    padding-right: 6rem;
+                    @media (max-width: 1024px) {
+                        padding-right: 2rem;
+                    }
+                    .quote-logo {
+                        img {
+                            //min-width: 8rem;
+                        }
+                    }
+                }
+            }
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100px;
+                display: inline-block;
+                background-color: $beige;
+                z-index: 1;
+                @media (max-width: 1024px) {
+                    display: none;
+                }
+            }
+            &:after {
+                right: 0;
+            }                
+        }
+    }
+}
